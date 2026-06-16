@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+ir_agent_env/
+venv/
+*.egg-info/
+
+# Logs from running the agent
+agent_actions.log
+*.log
+
+# macOS
+.DS_Store
+
+# Environment files with real credentials
+.env
+EOF
