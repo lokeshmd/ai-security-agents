@@ -1,7 +1,7 @@
 # AI Security Agents
 
 A collection of AI-powered agents for cybersecurity tasks — starting with an
-incident response (IR) triage agent built on Wazuh + Ollama.
+incident response (IR) triage agent built on lokeshmd + Ollama.
 
 ## Agents
 
