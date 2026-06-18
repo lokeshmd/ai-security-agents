@@ -60,7 +60,8 @@ python3 code_reviewer.py --path . --model phi3            # use a different mode
 multi-language support are planned — see roadmap in the script's comments.
 
 ---
-3. Mac Security Agent — mac_security_agent.py
+
+### 3. Mac Security Agent — `mac_security_agent.py`
 
 On-demand security posture checkup and activity monitor for macOS. Checkup
 mode reviews FileVault, firewall, Gatekeeper, SIP, software updates, screen
@@ -76,20 +77,25 @@ auto-applied — but only one at a time, with your explicit confirmation
 before anything runs. Higher-impact changes (FileVault, SIP, removing
 startup items) are always report-only by design.
 
-Setup: same virtual environment as the other agents.
+**Setup:** same virtual environment as the other agents.
 
-bashollama pull mistral
+```bash
+ollama pull mistral
+```
 
-Usage:
-
-bashpython3 mac_security_agent.py --checkup                    # security posture scan
+**Usage:**
+```bash
+python3 mac_security_agent.py --checkup                    # security posture scan
 python3 mac_security_agent.py --monitor                    # activity snapshot
 python3 mac_security_agent.py --checkup --monitor          # run both
 python3 mac_security_agent.py --checkup --auto-fix         # offer safe fixes interactively
+```
 
-Note: some checks (FileVault, SIP status) may prompt for your macOS
+**Note:** some checks (FileVault, SIP status) may prompt for your macOS
 password — that's the OS asking, not the script. All analysis runs locally
 via Ollama; nothing is sent anywhere.
+
+---
 
 ## Requirements
 
@@ -97,9 +103,6 @@ via Ollama; nothing is sent anywhere.
 - Python 3.10+
 - [Ollama](https://ollama.com) for local LLM inference
 - Wazuh (optional, only needed for the IR agent's live-alert mode)
-
-
-
 
 ## Notes
 
